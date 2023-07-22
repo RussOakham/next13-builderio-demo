@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+
+import { urbanist } from './fonts'
 
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -17,7 +16,7 @@ interface RootLayoutProps {
 const RootLayout = ({ children }: RootLayoutProps) => {
 	return (
 		<html lang="en">
-			<body className={inter.className}>{children}</body>
+			<body className={urbanist.className}>{children}</body>
 		</html>
 	)
 }
