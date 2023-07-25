@@ -1,6 +1,6 @@
 'use client'
 
-import { Award, Car } from 'lucide-react'
+import { Car } from 'lucide-react'
 import Link from 'next/link'
 
 import {
@@ -15,18 +15,12 @@ import {
 
 import DarkModeToggle from './dark-mode-toggle'
 import NavListItem from './nav-list-item'
+import SiteLogo from './site-logo'
 
 const MainNav = () => {
 	return (
 		<div className="flex py-3">
-			<Link
-				aria-label="Home"
-				href="/"
-				className="relative -top-[0.12rem] flex items-center space-x-2 px-4 py-2"
-			>
-				<Award className="h-6 w-6" />
-				<span className="font-bold lg:inline-block">Steeleford</span>
-			</Link>
+			<SiteLogo title="Steeleford" />
 			<NavigationMenu>
 				<NavigationMenuList className="justify-between">
 					<div className="flex">
