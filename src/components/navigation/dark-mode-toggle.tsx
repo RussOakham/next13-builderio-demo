@@ -1,6 +1,6 @@
 'use client'
 
-import { Moon, Sun } from 'lucide-react'
+import { LuMoon, LuSun } from 'react-icons/lu'
 import { useTheme } from 'next-themes'
 
 import { Button } from '../ui/button'
@@ -15,12 +15,12 @@ const DarkModeToggle: React.FC = () => {
 			onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
 		>
 			{theme === 'light' ? (
-				<Sun
+				<LuSun
 					className="h-5 w-5 rotate-0 scale-100 transition-all dark:rotate-0 dark:scale-0"
 					aria-hidden="true"
 				/>
 			) : (
-				<Moon
+				<LuMoon
 					className="h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
 					aria-hidden="true"
 				/>

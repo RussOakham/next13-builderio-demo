@@ -1,6 +1,6 @@
 'use client'
 
-import { Car } from 'lucide-react'
+import { IoCarSportSharp } from 'react-icons/io5'
 import Link from 'next/link'
 
 import {
@@ -14,6 +14,7 @@ import {
 } from '../ui/navigation-menu'
 
 import DarkModeToggle from './dark-mode-toggle'
+import NavListFeatureItem from './nav-list-feature-item'
 import NavListItem from './nav-list-item'
 import SiteLogo from './site-logo'
 
@@ -30,25 +31,11 @@ const MainNav = () => {
 							</NavigationMenuTrigger>
 							<NavigationMenuContent>
 								<ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-									<li className="row-span-3">
-										<NavigationMenuLink asChild>
-											<a
-												href="/"
-												aria-label="Home"
-												className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-											>
-												<Car className="h-6 w-6" />
-												<div className="mb-2 mt-4 text-lg font-medium">
-													Steeleford Supercar Show
-												</div>
-												<p className="text-sm leading-tight text-muted-foreground">
-													Much loved annual show that brings together all kinds
-													of interesting and rare supercars from the south of
-													England.
-												</p>
-											</a>
-										</NavigationMenuLink>
-									</li>
+									<NavListFeatureItem
+										label="Steeleford Supercar Show"
+										description="Much loved annual show that brings together all kinds of interesting and rare supercars from the south of	England."
+										icon={<IoCarSportSharp className="h-6 w-6" />}
+									/>
 									<NavListItem title="Partners">
 										Find our about our our sponsorship opportunities
 									</NavListItem>
