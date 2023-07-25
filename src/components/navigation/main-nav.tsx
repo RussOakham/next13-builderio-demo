@@ -95,6 +95,13 @@ const MainNav = () => {
 					</div>
 
 					<div className="flex">
+						<NavigationMenuItem>
+							<Link href="/superhillclimb" legacyBehavior passHref>
+								<NavigationMenuLink className={navigationMenuTriggerStyle()}>
+									Hill Climb 2023
+								</NavigationMenuLink>
+							</Link>
+						</NavigationMenuItem>
 						<NavigationMenuItem className="ml-auto">
 							<DarkModeToggle />
 						</NavigationMenuItem>
