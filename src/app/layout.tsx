@@ -1,5 +1,9 @@
 import type { Metadata } from 'next'
 
+import MainNav from '@/components/navigation/main-nav'
+import Container from '@/components/ui/container'
+import ThemeProvider from '@/providers/theme-provider'
+
 import { urbanist } from './fonts'
 
 import './globals.css'
@@ -16,7 +20,14 @@ interface RootLayoutProps {
 const RootLayout = ({ children }: RootLayoutProps) => {
 	return (
 		<html lang="en">
-			<body className={urbanist.className}>{children}</body>
+			<body className={urbanist.className}>
+				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+					<Container className="h-full">
+						<MainNav />
+						{children}
+					</Container>
+				</ThemeProvider>
+			</body>
 		</html>
 	)
 }
