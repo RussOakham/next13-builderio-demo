@@ -40,9 +40,9 @@ const MainNav = ({ featuredNavItem, items, siteEventSwitch }: MainNavProps) => {
 	}
 
 	return (
-		<div className="flex py-3">
+		<div className="flex w-full py-3">
 			<SiteLogo title="Steeleford" />
-			<NavigationMenu>
+			<NavigationMenu className="h-full">
 				<NavigationMenuList className="justify-between">
 					<div className="flex">
 						<NavigationMenuItem>

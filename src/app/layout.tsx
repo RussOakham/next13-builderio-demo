@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 
-import MainNav from '@/components/navigation/main-nav'
-import Container from '@/components/ui/container'
+import SiteHeader from '@/components/layout/site-header'
 import siteConfig from '@/config/site'
 import ThemeProvider from '@/providers/theme-provider'
 
@@ -9,11 +8,7 @@ import { urbanist } from './fonts'
 
 import './globals.css'
 
-const {
-	name,
-	description,
-	supercarShow: { mainNav, mainNavFeature, siteEventSwitch },
-} = siteConfig
+const { name, description } = siteConfig
 
 export const metadata: Metadata = {
 	title: name,
@@ -32,14 +27,8 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 		<html lang="en" suppressHydrationWarning>
 			<body className={urbanist.className}>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-					<Container className="h-full">
-						<MainNav
-							items={mainNav}
-							featuredNavItem={mainNavFeature}
-							siteEventSwitch={siteEventSwitch}
-						/>
-						{children}
-					</Container>
+					<SiteHeader />
+					{children}
 				</ThemeProvider>
 			</body>
 		</html>
