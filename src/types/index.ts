@@ -20,6 +20,8 @@ export interface NavItemWithOptionalChildren extends NavItem {
 
 export type MainNavItem = NavItemWithOptionalChildren
 
+export type SideNavItem = NavItemWithChildren
+
 export type FeatureNavItem = {
 	label: string
 	description: string
