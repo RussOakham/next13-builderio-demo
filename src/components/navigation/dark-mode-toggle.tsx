@@ -10,8 +10,8 @@ const DarkModeToggle: React.FC = () => {
 
 	return (
 		<Button
-			variant="ghost"
-			size="icon"
+			variant="outline"
+			size="iconSm"
 			onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
 		>
 			{theme === 'light' ? (

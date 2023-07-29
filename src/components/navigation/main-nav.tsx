@@ -1,21 +1,17 @@
 'use client'
 
 import { IoCarSportSharp } from 'react-icons/io5'
-import Link from 'next/link'
 
-import { FeatureNavItem, MainNavItem, SiteEventSwitch } from '@/types'
+import { FeatureNavItem, MainNavItem } from '@/types'
 
 import {
 	NavigationMenu,
 	NavigationMenuContent,
 	NavigationMenuItem,
-	NavigationMenuLink,
 	NavigationMenuList,
 	NavigationMenuTrigger,
-	navigationMenuTriggerStyle,
 } from '../ui/navigation-menu'
 
-import DarkModeToggle from './dark-mode-toggle'
 import NavListFeatureItem from './nav-list-feature-item'
 import NavListItem from './nav-list-item'
 import SiteLogo from './site-logo'
@@ -23,10 +19,9 @@ import SiteLogo from './site-logo'
 interface MainNavProps {
 	featuredNavItem?: FeatureNavItem
 	items?: MainNavItem[]
-	siteEventSwitch?: SiteEventSwitch
 }
 
-const MainNav = ({ featuredNavItem, items, siteEventSwitch }: MainNavProps) => {
+const MainNav = ({ featuredNavItem, items }: MainNavProps) => {
 	let firstMenuItems
 
 	if (items?.[0]?.items) {
@@ -90,29 +85,6 @@ const MainNav = ({ featuredNavItem, items, siteEventSwitch }: MainNavProps) => {
 										: null}
 								</ul>
 							</NavigationMenuContent>
-						</NavigationMenuItem>
-					</div>
-
-					<div className="flex">
-						{siteEventSwitch ? (
-							<NavigationMenuItem>
-								<Link href={siteEventSwitch.href} legacyBehavior passHref>
-									<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-										{siteEventSwitch.label}
-									</NavigationMenuLink>
-								</Link>
-							</NavigationMenuItem>
-						) : null}
-
-						<NavigationMenuItem className="ml-auto">
-							<DarkModeToggle />
-						</NavigationMenuItem>
-						<NavigationMenuItem>
-							<Link href="/" legacyBehavior passHref>
-								<NavigationMenuLink className={navigationMenuTriggerStyle()}>
-									Sign In
-								</NavigationMenuLink>
-							</Link>
 						</NavigationMenuItem>
 					</div>
 				</NavigationMenuList>
