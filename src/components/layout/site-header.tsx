@@ -17,12 +17,16 @@ const {
 const SiteHeader: React.FC = () => {
 	return (
 		<header className="sticky top-0 z-40 w-full border-b bg-background">
-			<div className="container flex h-16 w-full items-center justify-between">
-				<MainNav items={mainNav} featuredNavItem={mainNavFeature} />
+			<div className="container flex  h-16 w-full flex-auto items-center justify-between">
+				<div className="flex-1">
+					<MainNav items={mainNav} featuredNavItem={mainNavFeature} />
 
-				<MobileNav mainNavItems={mainNav} />
+					<MobileNav mainNavItems={mainNav} />
+				</div>
 
-				<nav>
+				<div className="flex-1 text-center lg:hidden">Steeleford</div>
+
+				<nav className="flex flex-1 justify-end">
 					<div className="flex items-center gap-3">
 						{siteEventSwitch ? (
 							<Link href={siteEventSwitch.href}>
