@@ -59,6 +59,26 @@ module.exports = {
 			fontFamily: {
 				sans: ['var(--roboto)'],
 			},
+			height: {
+				112: '28rem',
+				128: '32rem',
+				144: '36rem',
+				160: '40rem',
+				176: '44rem',
+				192: '48rem',
+				208: '52rem',
+				224: '56rem',
+			},
+			maxHeight: {
+				112: '28rem',
+				128: '32rem',
+				144: '36rem',
+				160: '40rem',
+				176: '44rem',
+				192: '48rem',
+				208: '52rem',
+				224: '56rem',
+			},
 			keyframes: {
 				'accordion-down': {
 					from: { height: 0 },

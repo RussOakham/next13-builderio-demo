@@ -24,7 +24,7 @@ interface RootLayoutProps {
 
 const RootLayout = ({ children }: RootLayoutProps) => {
 	return (
-		<html lang="en" suppressHydrationWarning>
+		<html lang="en-GB" suppressHydrationWarning>
 			<body className={urbanist.className}>
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<SiteHeader />

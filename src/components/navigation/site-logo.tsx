@@ -1,4 +1,4 @@
-'use Client'
+'use client'
 
 import { IoCarSportOutline } from 'react-icons/io5'
 import Link from 'next/link'
