@@ -36,7 +36,9 @@ const HeroBannerLarge = ({
 								src={logoSrc}
 								alt={logoAlt ?? ''}
 								width={400}
-								height={300}
+								height={295}
+								priority
+								style={{ width: 'auto', height: 'auto' }}
 							/>
 						) : null}
 
