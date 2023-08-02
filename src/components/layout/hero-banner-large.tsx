@@ -22,7 +22,7 @@ const HeroBannerLarge = ({
 	const y = useTransform(scrollYProgress, [0, 1], ['0%', '35%'])
 
 	return (
-		<div className="h-[70vh] w-full overflow-hidden">
+		<section className="h-[70vh] w-full overflow-hidden">
 			<div className="relative w-screen" style={{ height: 'inherit ' }}>
 				<motion.div
 					className="absolute -z-10 w-full"
@@ -56,7 +56,7 @@ const HeroBannerLarge = ({
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
 
