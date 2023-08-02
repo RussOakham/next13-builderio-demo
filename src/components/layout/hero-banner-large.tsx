@@ -1,3 +1,6 @@
+'use client'
+
+import { motion, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
 
 interface HeroBannerLargeProps {
@@ -15,10 +18,16 @@ const HeroBannerLarge = ({
 	logoAlt,
 	logoSrc,
 }: HeroBannerLargeProps) => {
+	const { scrollYProgress } = useScroll()
+	const y = useTransform(scrollYProgress, [0, 1], ['0%', '35%'])
+
 	return (
-		<div className="h-[70vh] w-full">
+		<div className="h-[70vh] w-full overflow-hidden">
 			<div className="relative w-screen" style={{ height: 'inherit ' }}>
-				<div className="absolute -z-10 w-full" style={{ height: 'inherit ' }}>
+				<motion.div
+					className="absolute -z-10 w-full"
+					style={{ height: 'inherit ', y }}
+				>
 					<Image
 						src={imageSrc}
 						alt={imageAlt}
@@ -28,7 +37,7 @@ const HeroBannerLarge = ({
 						priority
 						className="h-full object-cover object-bottom"
 					/>
-				</div>
+				</motion.div>
 
 				<div className="relative flex h-full flex-col items-center justify-center">
 					<div className="flex max-w-lg flex-col items-center">

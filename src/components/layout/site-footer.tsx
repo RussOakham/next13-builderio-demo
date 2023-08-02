@@ -19,7 +19,7 @@ const SiteFooter = ({ footerNav }: SiteFooterProps) => {
 	return (
 		<>
 			<Separator className="mt-8" />
-			<Container as="footer" aria-label="footer" className="my-2">
+			<Container as="footer" aria-label="footer" className="py-2">
 				<div className="flex h-20 items-center justify-center gap-x-5 align-middle md:h-28">
 					{footerNav.links.map((link) => (
 						<div
@@ -45,7 +45,7 @@ const SiteFooter = ({ footerNav }: SiteFooterProps) => {
 						</div>
 					))}
 				</div>
-				<div className="flex justify-center">
+				<div className="flex justify-center pb-4">
 					&copy;{` ${year}  ${footerNav.copyright}`}
 				</div>
 			</Container>

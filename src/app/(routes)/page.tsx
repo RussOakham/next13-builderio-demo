@@ -22,8 +22,8 @@ const Homepage: React.FC = () => {
 			<Separator className="mb-4 mt-6 md:mb-6 md:mt-14" />
 			<SponsorBanner sponsors={sponsors} />
 			<Separator className="md:mt-66 mb-6 mt-4 md:mb-14" />
-			<Container className="mb-6 flex gap-x-9 md:mb-14">
-				<div className="w-1/2 text-center">
+			<Container className="mb-6 flex flex-col gap-x-9 md:mb-14 md:flex-row">
+				<div className="w-full text-center md:w-1/2">
 					<Image
 						src="/images/supercars-on-display.webp"
 						alt="Supercars on display at Standsted House"
@@ -33,8 +33,8 @@ const Homepage: React.FC = () => {
 						className="h-full rounded-md object-cover object-bottom"
 					/>
 				</div>
-				<div className="flex w-1/2 flex-col gap-y-3">
-					<h3 className="font-sans text-3xl font-medium">
+				<div className="flex w-full flex-col gap-y-3 md:w-1/2">
+					<h3 className="pt-4 font-sans text-3xl font-medium md:pt-0">
 						2023. Bigger, better, louder.
 					</h3>
 					<p>

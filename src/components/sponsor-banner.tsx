@@ -12,9 +12,13 @@ interface SponsorBannerProps {
 const SponsorBanner = ({ sponsors }: SponsorBannerProps) => {
 	return (
 		<Container>
-			<div className="flex items-center gap-x-3">
+			<div className="flex flex-wrap items-center justify-center gap-x-3 md:flex-nowrap">
 				{sponsors.map((sponsor) => (
-					<Link href={sponsor.websiteUrl} key={sponsor.name}>
+					<Link
+						href={sponsor.websiteUrl}
+						key={sponsor.name}
+						className="w-1/5 sm:w-1/4 md:w-auto"
+					>
 						<Image
 							key={sponsor.name}
 							src={sponsor.logoUrl}
