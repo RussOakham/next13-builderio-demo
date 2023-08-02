@@ -30,7 +30,7 @@ const Homepage: React.FC = () => {
 						height={1000}
 						width={1500}
 						style={{ width: '100%' }}
-						className="h-full object-cover object-bottom"
+						className="h-full rounded-md object-cover object-bottom"
 					/>
 				</div>
 				<div className="flex w-1/2 flex-col gap-y-3">
@@ -65,7 +65,7 @@ const Homepage: React.FC = () => {
 					height={1000}
 					width={1500}
 					style={{ width: '100%' }}
-					className="h-full object-cover object-bottom"
+					className="h-full rounded-md object-cover object-bottom"
 				/>
 			</Container>
 		</>

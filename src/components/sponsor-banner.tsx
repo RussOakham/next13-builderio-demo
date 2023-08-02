@@ -21,6 +21,7 @@ const SponsorBanner = ({ sponsors }: SponsorBannerProps) => {
 							alt={sponsor.name}
 							height={250}
 							width={250}
+							className="rounded-md"
 						/>
 					</Link>
 				))}
