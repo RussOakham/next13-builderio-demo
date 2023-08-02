@@ -1,5 +1,6 @@
 'use client'
 
+import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import Image from 'next/image'
 
@@ -18,11 +19,15 @@ const HeroBannerLarge = ({
 	logoAlt,
 	logoSrc,
 }: HeroBannerLargeProps) => {
-	const { scrollYProgress } = useScroll()
+	const ref = useRef<HTMLDivElement>(null)
+	const { scrollYProgress } = useScroll({
+		target: ref,
+		offset: ['start start', 'end start'],
+	})
 	const y = useTransform(scrollYProgress, [0, 1], ['0%', '35%'])
 
 	return (
-		<section className="h-[70vh] w-full overflow-hidden">
+		<section ref={ref} className="h-[70vh] w-full overflow-hidden">
 			<div className="relative w-screen" style={{ height: 'inherit ' }}>
 				<motion.div
 					className="absolute -z-10 w-full"
