@@ -22,7 +22,7 @@ const NavListFeatureItem = ({
 			<NavigationMenuLink asChild>
 				<a
 					href="/"
-					aria-label="Home"
+					aria-label={`Go to ${label}`}
 					className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
 				>
 					<>{icon}</>

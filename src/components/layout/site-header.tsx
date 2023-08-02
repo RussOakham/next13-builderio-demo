@@ -26,7 +26,7 @@ const SiteHeader: React.FC = () => {
 
 				<div className="flex-1 text-center lg:hidden">Steeleford</div>
 
-				<nav className="flex flex-1 justify-end">
+				<nav className="flex flex-1 justify-end" aria-label="account-nav">
 					<div className="flex items-center gap-3">
 						{siteEventSwitch ? (
 							<Link href={siteEventSwitch.href}>

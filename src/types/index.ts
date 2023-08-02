@@ -18,6 +18,18 @@ export interface NavItemWithOptionalChildren extends NavItem {
 	items?: NavItemWithChildren[]
 }
 
+export interface FooterItem {
+	title: string
+	href: string
+	external: boolean
+	icon?: JSX.Element
+}
+
+export type FooterNav = {
+	copyright: string
+	links: FooterItem[]
+}
+
 export type MainNavItem = NavItemWithOptionalChildren
 
 export type SideNavItem = NavItemWithChildren

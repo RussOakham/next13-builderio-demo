@@ -1,4 +1,6 @@
-import { MainNavItem } from '@/types'
+import { LuContact, LuFacebook, LuFileText, LuInstagram } from 'react-icons/lu'
+
+import { FooterNav, MainNavItem } from '@/types'
 
 const siteConfig = {
 	name: 'Steeleford',
@@ -78,6 +80,35 @@ const siteConfig = {
 			},
 		] satisfies MainNavItem[],
 		siteEventSwitch: { label: 'Hill Climb 2023', href: '/superhillclimb' },
+		footerNav: {
+			copyright: 'Steeleford Events Ltd. All rights reserved.',
+			links: [
+				{
+					title: 'Contact Us',
+					href: '/supercarshow/contactus',
+					external: false,
+					icon: <LuContact className="h-6 w-6" />,
+				},
+				{
+					title: 'Instagram',
+					href: 'http://instagram.com/steeleford_events',
+					external: true,
+					icon: <LuInstagram className="h-6 w-6" />,
+				},
+				{
+					title: 'Facebook',
+					href: 'https://www.facebook.com/SteelefordSupercarShow',
+					external: true,
+					icon: <LuFacebook className="h-6 w-6" />,
+				},
+				{
+					title: 'Terms & Conditions',
+					href: '/terms-conditions',
+					external: false,
+					icon: <LuFileText className="h-6 w-6" />,
+				},
+			],
+		} satisfies FooterNav,
 	},
 }
 

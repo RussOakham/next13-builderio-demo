@@ -34,7 +34,11 @@ const MobileNav = ({ mainNavItems }: MobileNavProps) => {
 	const { width } = useWindowDimension()
 
 	return (
-		<Sheet open={isOpen} onOpenChange={setIsOpen}>
+		<Sheet
+			open={isOpen}
+			onOpenChange={setIsOpen}
+			aria-label="mobile-navigation"
+		>
 			<SheetTrigger asChild>
 				<Button
 					variant="ghost"

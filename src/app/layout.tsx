@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 
+import SiteFooter from '@/components/layout/site-footer'
 import SiteHeader from '@/components/layout/site-header'
 import siteConfig from '@/config/site'
 import ThemeProvider from '@/providers/theme-provider'
@@ -8,7 +9,11 @@ import { urbanist } from './fonts'
 
 import './globals.css'
 
-const { name, description } = siteConfig
+const {
+	name,
+	description,
+	supercarShow: { footerNav },
+} = siteConfig
 
 export const metadata: Metadata = {
 	title: name,
@@ -29,6 +34,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
 				<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
 					<SiteHeader />
 					{children}
+					<SiteFooter footerNav={footerNav} />
 				</ThemeProvider>
 			</body>
 		</html>
