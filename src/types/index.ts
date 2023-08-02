@@ -31,3 +31,10 @@ export type SiteEventSwitch = {
 	label: string
 	href: string
 }
+
+export interface Sponsor {
+	name: string
+	logoUrl: string
+	websiteUrl: string
+	description?: string
+}

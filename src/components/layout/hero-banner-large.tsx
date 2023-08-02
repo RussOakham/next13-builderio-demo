@@ -24,8 +24,9 @@ const HeroBannerLarge = ({
 						alt={imageAlt}
 						height={2000}
 						width={2000}
+						style={{ width: '100%' }}
 						priority
-						className="h-full object-cover object-center"
+						className="h-full object-cover object-bottom"
 					/>
 				</div>
 
